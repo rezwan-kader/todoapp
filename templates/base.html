@@ -1,0 +1,134 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %} {% endblock %}</title>
+
+    {# ===== C S S ===== #}
+    <link rel="stylesheet" href="{% static 'css/bootstrap.css' %}">
+    <link rel="stylesheet" href="{% static 'css/bootstrap-grid.css' %}">
+    <link rel="stylesheet" href="{% static 'css/bootstrap-reboot.css' %}">
+    <link rel="stylesheet" href="{% static 'css/mdb.css' %}">
+    <link rel="stylesheet" href="{% static 'css/mdb.lite.css' %}">
+    {#<link rel="stylesheet" href="{% static 'css/style.css' %}">#}
+    {#=====A D D O N S=====#}
+    <link rel="stylesheet" href="{% static 'css/addons/datatables.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/addons/datatables-select.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/addons/directives.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/addons/flag.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/addons/jquery.zmd.hierarchical-display.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/addons/rating.min.css' %}">
+    {#=====A D D O N S   P R O=====#}
+    <link rel="stylesheet" href="{% static 'css/addons-pro/cards-extended.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/addons-pro/chat.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/addons-pro/multi-range.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/addons-pro/simple-charts.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/addons-pro/steppers.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/addons-pro/timeline.min.css' %}">
+    {#=====M O D U L E S=====#}
+    <link rel="stylesheet" href="{% static 'css/modules/accordion-extended.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/modules/animations-extended.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/modules/lightbox.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/modules/megamenu.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/modules/parallax.min.css' %}">
+
+    {#===== E X T R A =====#}
+    <link rel="stylesheet" href="{% static 'css/all.css' %}">
+    <link rel="stylesheet" href="{% static 'css/animate.css' %}">
+    <link rel="stylesheet" href="{% static 'css/animate-3.7.0.css' %}">
+    <link rel="stylesheet" href="{% static 'css/duotone.css' %}">
+    <link rel="stylesheet" href="{% static 'css/duotone.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/flaticon.css' %}">
+    <link rel="stylesheet" href="{% static 'css/fontawesome.css' %}">
+    <link rel="stylesheet" href="{% static 'css/fontawesome.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/font-awesome.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/font-awesome-4.7.0.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/linearicons.css' %}">
+    <link rel="stylesheet" href="{% static 'css/magnific-popup.css' %}">
+    <link rel="stylesheet" href="{% static 'css/owl.carousel.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/themify-icons.css' %}">
+    <link rel="stylesheet" href="{% static 'css/all.min.css' %}">
+    {# ===== C S S ===== #}
+
+</head>
+{% block content %}
+
+
+
+{% endblock %}
+
+
+{#        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>#}
+{#        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>#}
+{#        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>#}
+        {# ==================== J A V A S C R I P T ==================== #}
+        <script type="text/javascript"  src="{% static '/js/jquery-3.4.1.js' %}"></script>
+        <script  src="{% static '/js/bootstrap.bundle.js' %}"></script>
+        <script  src="{% static '/js/bootstrap.bundle.min.js' %}"></script>
+        <script  src="{% static '/js/bootstrap.js' %}"></script>
+        <script type="text/javascript"  src="{% static '/js/bootstrap.min.js' %}"></script>
+        <script  src="{% static '/js/jquery.js' %}"></script>
+        <script  src="{% static '/js/mdb.js' %}"></script>
+        <script  src="{% static '/js/mdb.lite.js' %}"></script>
+        <script  src="{% static '/js/mdb.lite.min.js' %}"></script>
+        <script  src="{% static '/js/popper.js' %}"></script>
+        <script type="text/javascript"  src="{% static '/js/popper.min.js' %}"></script>
+        {#=====A D D O N S=====#}
+        <script  src="{% static '/js/addons/datatables.min.js' %}"></script>
+        <script  src="{% static '/js/addons/datatables-select.min.js' %}"></script>
+        <script  src="{% static '/js/addons/directives.min.js' %}"></script>
+        <script  src="{% static '/js/addons/flag.min.js' %}"></script>
+        <script  src="{% static '/js/addons/imagesloaded.pkgd.min.js' %}"></script>
+        <script  src="{% static '/js/addons/jquery.zmd.hierarchical-display.min.js' %}"></script>
+        <script  src="{% static '/js/addons/masonry.pkgd.min.js' %}"></script>
+        <script  src="{% static '/js/addons/rating.min.js' %}"></script>
+        {#=====A D D O N S  P R O=====#}
+        <script  src="{% static '/js/addons-pro/cards-extended.min.js' %}"></script>
+        <script  src="{% static '/js/addons-pro/chat.min.js' %}"></script>
+        <script  src="{% static '/js/addons-pro/multi-range.min.js' %}"></script>
+        <script  src="{% static '/js/addons-pro/simple-charts.min.js' %}"></script>
+        <script  src="{% static '/js/addons-pro/steppers.min.js' %}"></script>
+        <script  src="{% static '/js/addons-pro/timeline.min.js' %}"></script>
+        {#=====M O D U L E S=====#}
+        <script  src="{% static '/js/modules/accordion-extended.min.js' %}"></script>
+        <script  src="{% static '/js/modules/animations-extended.min.js' %}"></script>
+        <script  src="{% static '/js/modules/buttons.min.js' %}"></script>
+        <script  src="{% static '/js/modules/cards.min.js' %}"></script>
+        <script  src="{% static '/js/modules/character-counter.min.js' %}"></script>
+        <script  src="{% static '/js/modules/chips.min.js' %}"></script>
+        <script  src="{% static '/js/modules/collapsible.min.js' %}"></script>
+        <script  src="{% static '/js/modules/file-input.min.js' %}"></script>
+        <script  src="{% static '/js/modules/forms-free.min.js' %}"></script>
+        <script  src="{% static '/js/modules/lightbox.min.js' %}"></script>
+        <script  src="{% static '/js/modules/mdb-autocomplete.min.js' %}"></script>
+        <script  src="{% static '/js/modules/megamenu.min.js' %}"></script>
+        <script  src="{% static '/js/modules/parallax.min.js' %}"></script>
+        <script  src="{% static '/js/modules/preloading.min.js' %}"></script>
+        <script  src="{% static '/js/modules/range-input.min.js' %}"></script>
+        <script  src="{% static '/js/modules/scrolling-navbar.min.js' %}"></script>
+        <script  src="{% static '/js/modules/sidenav.min.js' %}"></script>
+        <script  src="{% static '/js/modules/smooth-scroll.min.js' %}"></script>
+        <script  src="{% static '/js/modules/sticky.min.js' %}"></script>
+        <script  src="{% static '/js/modules/treeview.min.js' %}"></script>
+        <script  src="{% static '/js/modules/wow.min.js' %}"></script>
+        {#=====M O D U L E S >> D R O P D O W N=====#}
+        <script  src="{% static '/js/modules/dropdown/dropdown.min.js' %}"></script>
+        <script  src="{% static '/js/modules/dropdown/dropdown-searchable.min.js' %}"></script>
+        {#=====M O D U L E S >> M A T E R I A L S   S E L E C T=====#}
+        <script  src="{% static '/js/modules/material-select/material-select.min.js' %}"></script>
+        <script  src="{% static '/js/modules/material-select/material-select-view.min.js' %}"></script>
+        <script  src="{% static '/js/modules/material-select/material-select-view-renderer.min.js' %}"></script>
+
+        {#===== E X T R A =====#}
+        <script src="{% static '/js/all.js' %}"></script>
+        <script src="{% static '/js/all.min.js' %}"></script>
+        <script src="{% static '/js/duotone.js' %}"></script>
+        <script src="{% static '/js/duotone.min.js' %}"></script>
+        <script src="{% static '/js/fontawesome.js' %}"></script>
+        <script src="{% static '/js/fontawesome.min.js' %}"></script>
+        <script src="{% static '/js/jquery.form.js' %}"></script>
+        <script src="{% static '/js/jquery.magnific-popup.js' %}"></script>
+        <script src="{% static '/js/jquery.magnific-popup.min.js' %}"></script>
+        <script src="{% static '/js/owl.carousel.min.js' %}"></script>
+</html>

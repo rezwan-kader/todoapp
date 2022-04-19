@@ -1,0 +1,96 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Welcome! To Web To-Do Application{% endblock %}
+{% block content %}
+    <body background="{% static 'img/background/BG-2.png' %}" style="background-attachment: fixed; background-size: cover; background-repeat: no-repeat; background-position: center center">
+    {# ====================================================================================================================================================================================================================================== #}
+    {% if messages %}
+        {% for message in messages %}
+            <div class="alert alert-success alert-dismissible fade show text-center black-text font-weight-bold" role="alert">
+                {{ message }}
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            </div>
+        {% endfor %}
+    {% endif %}
+    {# ====================================================================================================================================================================================================================================== #}
+    <div class="text-center" style="margin-top: 32em; margin-left: 2em">
+        <button type="button" class="btn waves-effect font-weight-bold white-text btn-rounded text-center" data-toggle="modal" data-target="#login" style="font-family: 'Century Gothic',sans-serif; font-size: 18px; width: 300px; background-color: black">Log In</button><br>
+        <span class="font-weight-bold text-center" style="font-family: 'Century Gothic',sans-serif; font-size: 15px; color: black">Don't have an account? </span><a class="font-weight-bold text-center text-danger" data-toggle="modal" data-target="#signup" style="font-family: 'Century Gothic',sans-serif; font-size: 15px" >Sign Up</a>
+    </div>
+    {# ====================================================================================================================================================================================================================================== #}
+    <div class="modal fade" id="login" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="margin-top: 15em">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header text-center">
+            <h4 class="modal-title w-100 font-weight-bold text-uppercase" style="font-family: 'Century Gothic', sans-serif">Login To Continue</h4>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          </div>
+          <form method="post" action="{% url 'userlogin' %}">
+            {% csrf_token %}
+          <div class="modal-body mx-3">
+            <div class="md-form mb-5">
+              <i class="fas fa-user prefix grey-text"></i>
+              <input type="text" id="username" name="username" class="form-control validate" required>
+              <label for="username">Username</label>
+            </div>
+            <div class="md-form mb-4">
+              <i class="fas fa-lock prefix grey-text"></i>
+              <input type="password" id="password" name="password" class="form-control validate" required>
+              <label for="password">Password</label>
+            </div>
+          </div>
+          <div class="modal-footer d-flex justify-content-center">
+            <button type="submit" class="btn btn-success btn-rounded waves-effect" style="width: 300px">Login</button>
+            <span class="font-weight-bold text-center" style="font-family: 'Century Gothic',sans-serif; font-size: 15px; color: black">Don't have an account? </span><a type="button" class="font-weight-bold text-center text-danger close"data-dismiss="modal" data-toggle="modal" data-target="#signup" style="font-family: 'Century Gothic',sans-serif; font-size: 15px" >Sign Up</a>
+          </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    {# ====================================================================================================================================================================================================================================== #}
+    <div class="modal fade" id="signup" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="margin-top: 15em">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header text-center">
+            <h4 class="modal-title w-100 font-weight-bold text-uppercase" style="font-family: 'Century Gothic', sans-serif">Sign up to get started</h4>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+            <form method="POST" action="{% url 'account' %}" >
+              {% csrf_token %}
+          <div class="modal-body mx-3">
+            <div class="md-form mb-5">
+              <i class="fas fa-user prefix grey-text"></i>
+              <input type="text" id="username" name="username" class="form-control validate" required>
+              <label for="username">Username</label>
+            </div>
+            <div class="md-form mb-5">
+              <i class="fas fa-envelope prefix grey-text"></i>
+              <input type="email" id="email" name="email" class="form-control validate" required>
+              <label for="email">Email</label>
+            </div>
+            <div class="md-form mb-4">
+              <i class="fas fa-lock prefix grey-text"></i>
+              <input type="password" id="password" name="password" class="form-control validate" required>
+              <label for="password">Password</label>
+                <div class="form-check my-4 text-center">
+                    <input class="form-check-input" type="checkbox" id="tick" required>
+                    <label for="tick" class="black-text font-weight-bold">Accept the<a href="#" class="text-danger font-weight-bold"> Terms and Conditions</a></label>
+                </div>
+            </div>
+          </div>
+          <div class="modal-footer d-flex justify-content-center">
+            <button class="btn btn-deep-purple btn-rounded" data-toggle="modal" data-target="#login" style="width: 300px" >Sign up</button>
+            <span class="font-weight-bold text-center" style="font-family: 'Century Gothic',sans-serif; font-size: 15px; color: black">Already have an account? </span><a type="button" class="font-weight-bold text-center text-danger close"data-dismiss="modal" data-toggle="modal" data-target="#login" style="font-family: 'Century Gothic',sans-serif; font-size: 15px" >Login</a>
+          </div>
+            </form>
+        </div>
+      </div>
+    </div>
+    {# ====================================================================================================================================================================================================================================== #}
+
+
+        {% block javascript %}{% endblock %}
+    </body>
+{% endblock %}

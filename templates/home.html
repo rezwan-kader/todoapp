@@ -1,0 +1,52 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Home | To-Do Application{% endblock %}
+{% block content %}
+
+    <body class="cloudy-knoxville-gradient">
+
+        <nav class="mb-1 navbar navbar-expand-lg navbar-dark default-color fadeInDown slower" id="top-section">
+          <a class="navbar-brand text-uppercase" style="font-family: 'Gill Sans MT',sans-serif" href="{% url 'home' %}">To-Do Application</a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent-4"
+            aria-controls="navbarSupportedContent-4" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent-4">
+            <ul class="navbar-nav ml-auto">
+              <li class="nav-item">
+                <form class="form-inline my-2 my-lg-0 ml-auto">
+                    <input class="form-control rounded-pill" style="width: 30em" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-white btn-rounded btn-md my-2 my-sm-0 ml-3 mr-5" type="submit">Search</button>
+                </form>
+              </li>
+              <li class="nav-item dropdown">
+                  <form method="post" action="{% url 'logout' %}">
+                      {% csrf_token %}
+                    <span class="font-weight-bold text-uppercase">Hello, {{ user.username }}</span>
+                    <button type="submit" class="btn btn-pink btn-outline-elegant btn-rounded btn-md my-2 my-sm-0 ml-3 font-weight-bold">Log Out</button>
+                  </form>
+              </li>
+            </ul>
+          </div>
+        </nav>
+    {#======================================================================================================================================================#}
+        <div class="row  d-flex justify-content-left">
+          <div class="col-md-6 col-xl-3 py-3 ml-4">
+              <a href="" class="btn btn-rounded btn-block mb-2">Topic 1</a>
+              <a href="" class="btn btn-rounded btn-block mb-2">Topic 1</a>
+              <a href="" class="btn btn-rounded btn-block mb-2">Topic 1</a>
+              <a href="" class="btn btn-rounded btn-block mb-2">Topic 1</a>
+              <a href="" class="btn btn-rounded btn-block mb-2">Topic 1</a>
+              <a href="" class="btn btn-rounded btn-block mb-2">Topic 1</a>
+          </div>
+        </div>
+        {# ========== S C R O L L   T O   T O P ========== #}
+        <div class="fixed-action-btn smooth-scroll text-center" style="bottom: 45px; right: 24px;">
+          <a href="#top-section" class="btn-floating btn-large text-center pink">
+            <i class="fas fa-arrow-up black-text text-center white-text mt-3"></i>
+          </a>
+        </div>
+        {# ========== S C R O L L   T O   T O P ========== #}
+    {#======================================================================================================================================================#}
+    </body>
+{% endblock %}
